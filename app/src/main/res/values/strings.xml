@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">YoutubeTutorialsAndroid</string>
 	<string name="homescreen_livedata_vs_flows">LiveData vs Flows</string>
+	<string name="livedatavsflowscreen_observable_comparison">Observable Comparison</string>
+	<string name="livedatavsflowscreen_livedata">Live Data</string>
+	<string name="livedatavsflowscreen_stateflow">State Flow</string>
+	<string name="livedatavsflowscreen_flow">Flow</string>
+	<string name="livedatavsflowscreen_sharedflow">Shared Flow</string>
+	<string name="livedatavsflowscreen_hello_world">Hello World!</string>
 </resources>

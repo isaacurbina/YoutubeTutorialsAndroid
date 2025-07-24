@@ -55,6 +55,9 @@ dependencies {
 	implementation(libs.androidx.lifecycle.viewmodel.nav3)
 	implementation(libs.kotlinx.serialization.core)
 	implementation(libs.kotlinx.serialization.json)
+	implementation(libs.koin.core)
+	implementation(libs.koin.android)
+	implementation(libs.koin.androidx.compose)
 
     testImplementation(libs.junit)
 
