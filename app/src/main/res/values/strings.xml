@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">YoutubeTutorialsAndroid</string>
+	<string name="homescreen_livedata_vs_flows">LiveData vs Flows</string>
 </resources>
