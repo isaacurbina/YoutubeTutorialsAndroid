@@ -6,5 +6,4 @@
 	<string name="livedatavsflowscreen_stateflow">State Flow</string>
 	<string name="livedatavsflowscreen_flow">Flow</string>
 	<string name="livedatavsflowscreen_sharedflow">Shared Flow</string>
-	<string name="livedatavsflowscreen_hello_world">Hello World!</string>
 </resources>
