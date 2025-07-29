@@ -56,6 +56,14 @@ fun HomeScreen(
 				Text(text = stringResource(R.string.homescreen_ktor))
 			}
 		}
+		item {
+			Button(
+				onClick = {
+					onIntent(HomeScreenIntent.LottieButtonClicked)
+				}) {
+				Text(text = stringResource(R.string.homescreen_lottie_animation))
+			}
+		}
 	}
 }
 
