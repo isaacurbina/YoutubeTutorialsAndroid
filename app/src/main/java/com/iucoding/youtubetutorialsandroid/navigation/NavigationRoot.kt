@@ -12,10 +12,12 @@ import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.HomeScreenKey
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.KtorKey
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.LiveDataVsFlowsKey
+import com.iucoding.youtubetutorialsandroid.navigation.navkey.LottieAnimationKey
 import com.iucoding.youtubetutorialsandroid.ui.screen.HomeScreen
 import com.iucoding.youtubetutorialsandroid.ui.screen.HomeScreenIntent
 import com.iucoding.youtubetutorialsandroid.ui.screen.ktor.KtorScreen
 import com.iucoding.youtubetutorialsandroid.ui.screen.livedatavsflow.LiveDataVsFlowScreen
+import com.iucoding.youtubetutorialsandroid.ui.screen.lottieanimation.LottieAnimationScreen
 
 @Composable
 fun NavigationRoot(
@@ -32,9 +34,7 @@ fun NavigationRoot(
 		),
 		entryProvider = { key ->
 			when (key) {
-				is HomeScreenKey -> NavEntry(
-					key = key
-				) {
+				is HomeScreenKey -> NavEntry(key = key) {
 					HomeScreen(
 						modifier = Modifier.fillMaxSize(),
 						onIntent = { intent ->
@@ -44,21 +44,24 @@ fun NavigationRoot(
 
 								HomeScreenIntent.KtorButtonClicked ->
 									backStack.add(KtorKey)
+
+								HomeScreenIntent.LottieButtonClicked ->
+									backStack.add(LottieAnimationKey)
 							}
 						}
 					)
 				}
 
-				is LiveDataVsFlowsKey -> NavEntry(
-					key = key
-				) {
+				is LiveDataVsFlowsKey -> NavEntry(key = key) {
 					LiveDataVsFlowScreen(modifier = Modifier.fillMaxSize())
 				}
 
-				is KtorKey -> NavEntry(
-					key = key
-				) {
+				is KtorKey -> NavEntry(key = key) {
 					KtorScreen(modifier = Modifier.fillMaxSize())
+				}
+
+				is LottieAnimationKey -> NavEntry(key = key) {
+					LottieAnimationScreen(modifier = Modifier.fillMaxSize())
 				}
 
 				else -> throw RuntimeException("Invalid NavKey.")

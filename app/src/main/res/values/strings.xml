@@ -7,4 +7,6 @@
 	<string name="livedatavsflowscreen_flow">Flow</string>
 	<string name="livedatavsflowscreen_sharedflow">Shared Flow</string>
     <string name="homescreen_ktor">Ktor</string>
+    <string name="homescreen_lottie_animation">Lottie Animation</string>
+	<string name="lottie_animation_screen_play_again">Play Again</string>
 </resources>
