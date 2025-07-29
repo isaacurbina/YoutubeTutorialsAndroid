@@ -10,9 +10,11 @@ import androidx.navigation3.runtime.rememberSavedStateNavEntryDecorator
 import androidx.navigation3.ui.NavDisplay
 import androidx.navigation3.ui.rememberSceneSetupNavEntryDecorator
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.HomeScreenKey
+import com.iucoding.youtubetutorialsandroid.navigation.navkey.KtorKey
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.LiveDataVsFlowsKey
 import com.iucoding.youtubetutorialsandroid.ui.screen.HomeScreen
 import com.iucoding.youtubetutorialsandroid.ui.screen.HomeScreenIntent
+import com.iucoding.youtubetutorialsandroid.ui.screen.ktor.KtorScreen
 import com.iucoding.youtubetutorialsandroid.ui.screen.livedatavsflow.LiveDataVsFlowScreen
 
 @Composable
@@ -39,14 +41,24 @@ fun NavigationRoot(
 							when (intent) {
 								HomeScreenIntent.LiveDataVsFlowsButtonClicked ->
 									backStack.add(LiveDataVsFlowsKey)
+
+								HomeScreenIntent.KtorButtonClicked ->
+									backStack.add(KtorKey)
 							}
-						})
+						}
+					)
 				}
 
 				is LiveDataVsFlowsKey -> NavEntry(
 					key = key
 				) {
 					LiveDataVsFlowScreen(modifier = Modifier.fillMaxSize())
+				}
+
+				is KtorKey -> NavEntry(
+					key = key
+				) {
+					KtorScreen(modifier = Modifier.fillMaxSize())
 				}
 
 				else -> throw RuntimeException("Invalid NavKey.")

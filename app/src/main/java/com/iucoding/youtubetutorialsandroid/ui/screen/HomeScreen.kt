@@ -48,6 +48,14 @@ fun HomeScreen(
 				Text(text = stringResource(R.string.homescreen_livedata_vs_flows))
 			}
 		}
+		item {
+			Button(
+				onClick = {
+					onIntent(HomeScreenIntent.KtorButtonClicked)
+				}) {
+				Text(text = stringResource(R.string.homescreen_ktor))
+			}
+		}
 	}
 }
 
