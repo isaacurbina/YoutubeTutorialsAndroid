@@ -6,4 +6,5 @@
 	<string name="livedatavsflowscreen_stateflow">State Flow</string>
 	<string name="livedatavsflowscreen_flow">Flow</string>
 	<string name="livedatavsflowscreen_sharedflow">Shared Flow</string>
+    <string name="homescreen_ktor">Ktor</string>
 </resources>
