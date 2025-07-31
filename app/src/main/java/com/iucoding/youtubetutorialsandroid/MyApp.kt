@@ -5,6 +5,7 @@ import com.iucoding.youtubetutorialsandroid.di.appModule
 import com.iucoding.youtubetutorialsandroid.di.ktorModule
 import com.iucoding.youtubetutorialsandroid.di.lottieModule
 import com.iucoding.youtubetutorialsandroid.di.mvvmVsMviModule
+import com.iucoding.youtubetutorialsandroid.di.webViewModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -14,7 +15,13 @@ class MyApp : Application() {
 		super.onCreate()
 		startKoin {
 			androidContext(this@MyApp)
-			modules(appModule + ktorModule + lottieModule + mvvmVsMviModule)
+			modules(
+				appModule +
+					ktorModule +
+					lottieModule +
+					mvvmVsMviModule +
+					webViewModule
+			)
 		}
 	}
 }

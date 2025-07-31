@@ -5,4 +5,5 @@ sealed interface HomeScreenIntent {
 	data object KtorButtonClicked : HomeScreenIntent
 	data object LottieButtonClicked : HomeScreenIntent
 	data object MvvmVsMviButtonClicked : HomeScreenIntent
+	data object WebViewButtonClicked : HomeScreenIntent
 }

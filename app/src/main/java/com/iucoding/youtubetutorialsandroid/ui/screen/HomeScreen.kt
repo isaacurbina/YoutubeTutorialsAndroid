@@ -72,6 +72,14 @@ fun HomeScreen(
 				Text(text = stringResource(R.string.homescreen_mvvm_vs_mvi))
 			}
 		}
+		item {
+			Button(
+				onClick = {
+					onIntent(HomeScreenIntent.WebViewButtonClicked)
+				}) {
+				Text(text = stringResource(R.string.homescreen_webview))
+			}
+		}
 	}
 }
 
