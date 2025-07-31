@@ -9,4 +9,7 @@
     <string name="homescreen_ktor">Ktor</string>
     <string name="homescreen_lottie_animation">Lottie Animation</string>
 	<string name="lottie_animation_screen_play_again">Play Again</string>
+	<string name="homescreen_mvvm_vs_mvi">MVVM vs. MVI</string>
+	<string name="homescreen_mvvm_vs_mvi_mvvm">MVVM</string>
+	<string name="homescreen_mvvm_vs_mvi_mvi">MVI</string>
 </resources>

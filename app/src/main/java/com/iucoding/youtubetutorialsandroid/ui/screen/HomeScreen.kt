@@ -64,6 +64,14 @@ fun HomeScreen(
 				Text(text = stringResource(R.string.homescreen_lottie_animation))
 			}
 		}
+		item {
+			Button(
+				onClick = {
+					onIntent(HomeScreenIntent.MvvmVsMviButtonClicked)
+				}) {
+				Text(text = stringResource(R.string.homescreen_mvvm_vs_mvi))
+			}
+		}
 	}
 }
 
