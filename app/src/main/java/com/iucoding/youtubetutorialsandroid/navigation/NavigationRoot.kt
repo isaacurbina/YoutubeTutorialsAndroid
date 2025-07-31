@@ -16,6 +16,7 @@ import com.iucoding.youtubetutorialsandroid.navigation.navkey.LottieAnimationKey
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.MviKey
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.MvvmKey
 import com.iucoding.youtubetutorialsandroid.navigation.navkey.MvvmVsMviKey
+import com.iucoding.youtubetutorialsandroid.navigation.navkey.WebViewKey
 import com.iucoding.youtubetutorialsandroid.ui.screen.HomeScreen
 import com.iucoding.youtubetutorialsandroid.ui.screen.HomeScreenIntent
 import com.iucoding.youtubetutorialsandroid.ui.screen.ktor.KtorScreen
@@ -25,6 +26,7 @@ import com.iucoding.youtubetutorialsandroid.ui.screen.mvvmvsmvi.MvvmVsMviIntent
 import com.iucoding.youtubetutorialsandroid.ui.screen.mvvmvsmvi.MvvmVsMviScreen
 import com.iucoding.youtubetutorialsandroid.ui.screen.mvvmvsmvi.mvi.MviScreenRoot
 import com.iucoding.youtubetutorialsandroid.ui.screen.mvvmvsmvi.mvvm.MvvmScreenRoot
+import com.iucoding.youtubetutorialsandroid.ui.screen.webview.WebViewScreen
 
 @Composable
 fun NavigationRoot(
@@ -57,6 +59,9 @@ fun NavigationRoot(
 
 								HomeScreenIntent.MvvmVsMviButtonClicked ->
 									backStack.add(MvvmVsMviKey)
+
+								HomeScreenIntent.WebViewButtonClicked ->
+									backStack.add(WebViewKey("https://www.wikipedia.org/"))
 							}
 						}
 					)
@@ -101,9 +106,15 @@ fun NavigationRoot(
 					)
 				}
 
+				is WebViewKey -> NavEntry(key = key) {
+					WebViewScreen(
+						url = key.url,
+						modifier = Modifier.fillMaxSize()
+					)
+				}
+
 				else -> throw RuntimeException("Invalid NavKey.")
 			}
-
 		}
 	)
 }

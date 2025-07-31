@@ -12,4 +12,5 @@
 	<string name="homescreen_mvvm_vs_mvi">MVVM vs. MVI</string>
 	<string name="homescreen_mvvm_vs_mvi_mvvm">MVVM</string>
 	<string name="homescreen_mvvm_vs_mvi_mvi">MVI</string>
+    <string name="homescreen_webview">WebView</string>
 </resources>
