@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -21,16 +20,16 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.iucoding.youtubetutorialsandroid.ui.theme.YoutubeTutorialsAndroidTheme
 import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.parameter.parametersOf
 
 @Composable
 fun WebViewScreen(
 	url: String,
 	modifier: Modifier = Modifier,
-	viewModel: WebViewViewModel = koinViewModel()
-) {
-	LaunchedEffect(key1 = url) {
-		viewModel.init(url)
+	viewModel: WebViewViewModel = koinViewModel() {
+		parametersOf(url)
 	}
+) {
 	val myUrl = viewModel.state.collectAsStateWithLifecycle().value?.url
 	myUrl?.let {
 		Column(modifier = modifier) {
